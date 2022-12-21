@@ -440,7 +440,7 @@ BEGIN
     THEN RAISE_APPLICATION_ERROR(-20005, 'Salutation must be either Mr. or Ms.!');
     END IF;
 
-        -- validate  email --
+        -- email validation, in reality it is happening through webservices --
     IF v_email LIKE '%@gmail.com' THEN  v_email := v_email;
         ELSIF v_email LIKE '%@abv.bg' THEN  v_email := v_email;
         ELSIF v_email LIKE '%@hotmail.com' THEN v_email := v_email;
